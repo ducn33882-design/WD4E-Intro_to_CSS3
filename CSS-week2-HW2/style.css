@@ -1,1 +1,75 @@
+/* ==========================================
+   BƯỚC 3: Thẻ nội dung (body)
+   - Thay đổi họ phông chữ (font-family)
+   - Thay đổi kích thước phông chữ (font-size)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+}
 
+/* ==========================================
+   BƯỚC 4: Thẻ tiêu đề (header)
+   - Sửa đổi thuộc tính màu nền (background-color)
+   ========================================== */
+header {
+    background-color: #2c3e50; /* Màu xanh xám đậm thanh lịch */
+    color: #ffffff;            /* Giúp chữ màu trắng để dễ đọc trên nền tối */
+}
+
+/* ==========================================
+   BƯỚC 5: Thẻ điều hướng (nav)
+   - Sửa đổi thuộc tính màu nền (background-color)
+   ========================================== */
+nav {
+    background-color: #ecf0f1; /* Màu xám nhạt */
+}
+
+/* ==========================================
+   BƯỚC 6: Thẻ chính (main)
+   - Sửa đổi màu nền (background-color)
+   - Sửa đổi thuộc tính kích thước phông chữ (font-size)
+   ========================================== */
+main {
+    background-color: #ffffff; /* Nền trắng cho nội dung chính */
+    font-size: 1.05rem;        /* Kích thước chữ lớn hơn một chút */
+}
+
+/* ==========================================
+   BƯỚC 7: Thẻ chân trang (footer)
+   - Sửa đổi thuộc tính màu nền (background-color)
+   ========================================== */
+footer {
+    background-color: #34495e; /* Màu tối cho chân trang */
+    color: #bdc3c7;            /* Màu chữ xám sáng */
+}
+
+/* ==========================================
+   BƯỚC 8: Thẻ danh sách (li)
+   - Sửa đổi thuộc tính hiển thị (display)
+   - Sửa đổi thuộc tính chiều rộng (width)
+   ========================================== */
+li {
+    display: inline-block;     /* Xếp các thẻ li thành hàng ngang (tiện làm menu) */
+    width: 150px;              /* Độ rộng cố định cho mỗi mục */
+}
+
+/* ==========================================
+   BƯỚC 9: Thẻ tiêu đề h1
+   - Sửa đổi căn chỉnh văn bản (text-align)
+   - Sửa đổi họ phông chữ (font-family)
+   - Sửa đổi thuộc tính màu sắc (color)
+   ========================================== */
+h1 {
+    text-align: center;         /* Căn giữa tiêu đề chính */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #16a085;             /* Màu xanh ngọc bắt mắt */
+}
+
+/* ==========================================
+   BƯỚC 10: Thẻ đoạn văn (p)
+   - Sửa đổi thuộc tính chiều cao dòng (line-height)
+   ========================================== */
+p {
+    line-height: 1.6;           /* Khoảng cách giữa các dòng thoáng, dễ đọc */
+}
