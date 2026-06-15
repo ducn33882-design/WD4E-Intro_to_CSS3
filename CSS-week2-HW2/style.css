@@ -23,6 +23,8 @@ header {
    ========================================== */
 nav {
     background-color: #ecf0f1; /* Màu xám nhạt */
+   display: inline-block;
+   width: 80%;
 }
 
 /* ==========================================
@@ -50,7 +52,7 @@ footer {
    - Sửa đổi thuộc tính chiều rộng (width)
    ========================================== */
 li {
-    display: inline-block;     /* Xếp các thẻ li thành hàng ngang (tiện làm menu) */
+    display: inline;     /* Xếp các thẻ li thành hàng ngang (tiện làm menu) */
     width: 150px;              /* Độ rộng cố định cho mỗi mục */
 }
 
@@ -72,4 +74,41 @@ h1 {
    ========================================== */
 p {
     line-height: 1.6;           /* Khoảng cách giữa các dòng thoáng, dễ đọc */
+}
+/* --- Yêu cầu 2: Link nhảy trang --- */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* --- Yêu cầu 5: Thu nhỏ ảnh trong thanh điều hướng --- */
+nav img {
+    width: 10%;
+}
+
+/* --- Yêu cầu 6, 7 & 8: Hệ thống lưới Grid 2 cột --- */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.grid-layout img {
+    width: 100%;
+}
+
+/* --- Yêu cầu 9: Bố cục linh hoạt Flexbox --- */
+.flex-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
