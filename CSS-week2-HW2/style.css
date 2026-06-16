@@ -1,114 +1,102 @@
-/* ==========================================
-   BƯỚC 3: Thẻ nội dung (body)
-   - Thay đổi họ phông chữ (font-family)
-   - Thay đổi kích thước phông chữ (font-size)
-   ========================================== */
+/* --- Định dạng cơ bản cho toàn trang --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f5f6fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* ==========================================
-   BƯỚC 4: Thẻ tiêu đề (header)
-   - Sửa đổi thuộc tính màu nền (background-color)
-   ========================================== */
-header {
-    background-color: #2c3e50; /* Màu xanh xám đậm thanh lịch */
-    color: #ffffff;            /* Giúp chữ màu trắng để dễ đọc trên nền tối */
-}
-
-/* ==========================================
-   BƯỚC 5: Thẻ điều hướng (nav)
-   - Sửa đổi thuộc tính màu nền (background-color)
-   ========================================== */
-nav {
-    background-color: #ecf0f1; /* Màu xám nhạt */
-   display: inline-block;
-   width: 80%;
-}
-
-/* ==========================================
-   BƯỚC 6: Thẻ chính (main)
-   - Sửa đổi màu nền (background-color)
-   - Sửa đổi thuộc tính kích thước phông chữ (font-size)
-   ========================================== */
-main {
-    background-color: #ffffff; /* Nền trắng cho nội dung chính */
-    font-size: 1.05rem;        /* Kích thước chữ lớn hơn một chút */
-}
-
-/* ==========================================
-   BƯỚC 7: Thẻ chân trang (footer)
-   - Sửa đổi thuộc tính màu nền (background-color)
-   ========================================== */
-footer {
-    background-color: #34495e; /* Màu tối cho chân trang */
-    color: #bdc3c7;            /* Màu chữ xám sáng */
-}
-
-/* ==========================================
-   BƯỚC 8: Thẻ danh sách (li)
-   - Sửa đổi thuộc tính hiển thị (display)
-   - Sửa đổi thuộc tính chiều rộng (width)
-   ========================================== */
-li {
-    display: inline;     /* Xếp các thẻ li thành hàng ngang (tiện làm menu) */
-    width: 150px;              /* Độ rộng cố định cho mỗi mục */
-}
-
-/* ==========================================
-   BƯỚC 9: Thẻ tiêu đề h1
-   - Sửa đổi căn chỉnh văn bản (text-align)
-   - Sửa đổi họ phông chữ (font-family)
-   - Sửa đổi thuộc tính màu sắc (color)
-   ========================================== */
-h1 {
-    text-align: center;         /* Căn giữa tiêu đề chính */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    color: #16a085;             /* Màu xanh ngọc bắt mắt */
-}
-
-/* ==========================================
-   BƯỚC 10: Thẻ đoạn văn (p)
-   - Sửa đổi thuộc tính chiều cao dòng (line-height)
-   ========================================== */
-p {
-    line-height: 1.6;           /* Khoảng cách giữa các dòng thoáng, dễ đọc */
-}
-/* --- Yêu cầu 2: Link nhảy trang --- */
+/* --- YÊU CẦU 1: Link ẩn chỉ hiện khi bấm Tab --- */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 0;
-    background: #000;
+    background: #2c3e50;
     color: #fff;
     padding: 8px;
     z-index: 100;
+    text-decoration: none;
 }
 .skip-link:focus {
     top: 0;
 }
 
-/* --- Yêu cầu 5: Thu nhỏ ảnh trong thanh điều hướng --- */
-nav img {
-    width: 10%;
+/* --- YÊU CẦU 2: Thanh điều hướng ngang --- */
+nav {
+    background-color: #2c3e50;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #1abc9c;
 }
 
-/* --- Yêu cầu 6, 7 & 8: Hệ thống lưới Grid 2 cột --- */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+/* --- YÊU CẦU 3: Hệ thống Grid chia làm 2 cột --- */
 .grid-layout {
     display: grid;
-    grid-template-columns: repeat(2, 40%);
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Chia đều 2 cột bằng nhau */
+    gap: 20px;                             /* Khoảng cách giữa các cột */
+    max-width: 1000px;
+    margin: 30px auto;                     /* Căn giữa toàn bộ khối main */
+    padding: 0 20px;
 }
-.grid-layout img {
+
+/* --- YÊU CẦU 4: Áp dụng BOX MODEL bắt mắt cho các khối nội dung --- */
+.card {
+    background-color: #ffffff;             /* Màu nền của hộp */
+    padding: 25px;                         /* Vùng đệm bên trong (Box Model) */
+    margin: 10px;                          /* Khoảng cách lề bên ngoài (Box Model) */
+    border: 1px solid #dcdde1;             /* Đường viền mỏng (Box Model) */
+    border-radius: 8px;                    /* Bo tròn góc cho đẹp */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);/* Đổ bóng nhẹ tạo chiều sâu */
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c;      /* Đường gạch chân dưới tiêu đề */
+    padding-bottom: 5px;
+}
+
+/* --- Định dạng Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 
-/* --- Yêu cầu 9: Bố cục linh hoạt Flexbox --- */
-.flex-layout {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Hỗ trợ hiển thị trên điện thoại (Tự co về 1 cột nếu màn hình nhỏ) */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        position: static;
+    }
 }
